@@ -1,43 +1,70 @@
 <app-container>
   <mat-card>
-    <form [formGroup]="cadastroForm">
+    <form
+      [formGroup]="cadastroForm">
       <mat-card-title>
         Crie sua conta
       </mat-card-title>
       <section>
         <div class="acoesPerfil">
           <h2>Dados pessoais</h2>
-          <button mat-stroked-button color="primary">
-            <mat-icon>logout</mat-icon>
+          <button
+            mat-stroked-button color="primary"  >
+            <mat-icon>
+              logout
+            </mat-icon>
             DESLOGAR
           </button>
         </div>
       </section>
       <mat-card-content>
         <div class="grid-container">
-          <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Nome</mat-label>
-            <input matInput formControlName="nome" placeholder="Nome">
-            <mat-error *ngIf="cadastroForm.get('nome')?.errors">Nome é obrigatório</mat-error>
+          <mat-form-field
+            appearance="outline"
+            class="full-width"  >
+            <mat-label>
+              Nome
+            </mat-label>
+            <input
+              matInput
+              formControlName="nome"
+              placeholder="Nome"  >
+            <mat-error
+              *ngIf="cadastroForm.get('nome')?.errors">
+              Nome é obrigatório
+            </mat-error>
           </mat-form-field>
           <div class="grid-item">
             <mat-form-field appearance="outline">
               <mat-label>Data de Nascimento</mat-label>
-              <input matInput
+              <input
+                matInput
                 formControlName="nascimento"
                 [matDatepicker]="nascimento"
                 placeholder="Data de Nascimento"
               >
-              <mat-datepicker-toggle matSuffix [for]="nascimento"></mat-datepicker-toggle>
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="nascimento">
+              </mat-datepicker-toggle>
               <mat-datepicker #nascimento></mat-datepicker>
-              <mat-error *ngIf="cadastroForm.get('nascimento')?.errors?.['required']">
+              <mat-error
+                *ngIf="cadastroForm.get('nascimento')?.errors?.['required']">
                 Data de Nascimento é obrigatória
               </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
-              <mat-label>CPF</mat-label>
-              <input matInput formControlName="cpf" placeholder="Digite seu CPF">
-              <mat-error *ngIf="cadastroForm.get('cpf')?.errors">CPF é obrigatório</mat-error>
+              <mat-label>
+                CPF
+              </mat-label>
+              <input
+                matInput
+                formControlName="cpf"
+                placeholder="Digite seu CPF">
+              <mat-error
+                *ngIf="cadastroForm.get('cpf')?.errors">
+                CPF é obrigatório
+              </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>Cidade</mat-label>
@@ -77,8 +104,15 @@
           <div class="grid-item">
             <mat-form-field appearance="outline">
               <mat-label>E-mail</mat-label>
-              <input matInput formControlName="email" type="email" placeholder="Digite seu e-mail">
-              <mat-error *ngIf="cadastroForm.get('email')?.errors?.['required']">E-mail é obrigatório</mat-error>
+              <input
+                matInput
+                formControlName="email"
+                type="email"
+                placeholder="Digite seu e-mail">
+              <mat-error
+                *ngIf="cadastroForm.get('email')?.errors?.['required']">
+                E-mail é obrigatório
+              </mat-error>
               <mat-error *ngIf="cadastroForm.get('email')?.errors?.['email']">E-mail inválido</mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
