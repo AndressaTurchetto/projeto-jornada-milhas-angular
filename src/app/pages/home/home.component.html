@@ -1,0 +1,21 @@
+<section class="homepage">
+  <app-banner
+    src="assets/imagens/banner-homepage.png"
+    alt="Banner da aplicação Jornada"
+  ></app-banner>
+  <app-container>
+    <app-form-busca (realizarBusca)="navegarBusca($event)"></app-form-busca>
+    <h2>Promoções</h2>
+    <app-promocoes></app-promocoes>
+    <h2>Depoimentos</h2>
+    <div class="card-wrapper">
+      <app-card-depoimento></app-card-depoimento>
+      <app-card-depoimento></app-card-depoimento>
+      <app-card-depoimento></app-card-depoimento>
+    </div>
+  </app-container>
+  <app-banner
+    src="assets/imagens/banner-homepage-rodape.png"
+    alt="Banner da aplicação Jornada"
+  ></app-banner>
+</section>
