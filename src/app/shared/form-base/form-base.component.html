@@ -161,17 +161,27 @@
                 formControlName="confirmarSenha"
                 type="password"
                 placeholder="Repita sua senha"  >
-              <mat-error *ngIf="cadastroForm.get('confirmarSenha')?.errors?.['required']">Confirmação de Senha é obrigatória</mat-error>
+              <mat-error
+                *ngIf="cadastroForm.get('confirmarSenha')?.errors?.['required']">
+                Confirmação de Senha é obrigatória
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
-        <mat-checkbox formControlName="aceitarTermos" color="primary" class="full-width">Li e aceito os termos e condições deste cadastro *</mat-checkbox>
-        <mat-error *ngIf="cadastroForm.get('aceitarTermos')?.invalid && cadastroForm.get('aceitarTermos')?.dirty">
+        <mat-checkbox
+          formControlName="aceitarTermos"
+          color="primary"
+          class="full-width">
+          Li e aceito os termos e condições deste cadastro *
+        </mat-checkbox>
+        <mat-error
+          *ngIf="cadastroForm.get('aceitarTermos')?.invalid && cadastroForm.get('aceitarTermos')?.dirty"  >
           Você precisa aceitar os termos e condições para efetuar o cadastro
         </mat-error>
       </mat-card-content>
       <mat-card-actions class="full-width">
-        <button mat-flat-button
+        <button
+          mat-flat-button
           [disabled]="cadastroForm.invalid"
           color="primary"
         >CADASTRAR
