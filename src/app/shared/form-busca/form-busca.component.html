@@ -63,17 +63,34 @@
         <mat-label>
           Data de ida
         </mat-label>
-        <input matInput [matDatepicker]="ida">
-        <mat-datepicker-toggle matIconSuffix [for]="ida"></mat-datepicker-toggle>
+        <input
+          matInput
+          [matDatepicker]="ida">
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="ida">
+        </mat-datepicker-toggle>
         <mat-datepicker #ida></mat-datepicker>
       </mat-form-field>
-      <mat-form-field class="input-container" appearance="outline">
+      <mat-form-field
+        class="input-container"
+        appearance="outline">
         <mat-label>Data da volta</mat-label>
-        <input matInput [matDatepicker]="volta">
-        <mat-datepicker-toggle matIconSuffix [for]="volta"></mat-datepicker-toggle>
-        <mat-datepicker #volta></mat-datepicker>
+        <input
+          matInput [matDatepicker]="volta">
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="volta">
+        </mat-datepicker-toggle>
+        <mat-datepicker
+          #volta>
+        </mat-datepicker>
       </mat-form-field>
-      <button mat-flat-button color="primary">BUSCAR</button>
+      <button
+        mat-flat-button
+        color="primary">
+        BUSCAR
+      </button>
     </div>
   </form>
 </app-card>
