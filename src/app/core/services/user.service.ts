@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { TokenService } from './token.service';
-import jwt_decode from 'jwt-decode';
 import { BehaviorSubject } from 'rxjs';
-import { PessoaUsuaria } from '../types/type';
+import { PessoaUsuaria } from '../types/types';
+
 
 @Injectable({
   providedIn: 'root'
@@ -40,5 +40,9 @@ export class UserService {
   estaLogado() {
     return this.tokenService.possuiToken();
   }
+}
+
+function jwt_decode(token: string): PessoaUsuaria {
+  throw new Error('Function not implemented.');
 }
 
