@@ -27,7 +27,7 @@ import { ModalComponent } from './shared/modal/modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PromocoesComponent } from './pages/home/promocoes/promocoes/promocoes.component';
+import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DropdownUfComponent } from './shared/dropdown-uf/dropdown-uf.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';

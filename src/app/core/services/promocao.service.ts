@@ -16,7 +16,7 @@ export class PromocaoService {
   ) { }
 
   listar () : Observable<Promocao[]> {
-    return this.httpClient.get<Promocao[]>(`${this.apiUrl}/promocoes`)
+    return this.httpClient.get<Promocao[]>(
+      `${this.apiUrl}/promocoes`)
   }
-
 }
