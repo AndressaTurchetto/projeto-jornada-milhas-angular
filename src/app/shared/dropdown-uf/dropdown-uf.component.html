@@ -21,8 +21,8 @@
     #auto="matAutocomplete">
       <mat-option
         *ngFor="let estado of filteredOptions$ | async"
-        [value]="estado.nome">
-        {{estado.nome}}
+        [value]="estado">
+        {{ estado.nome }}
       </mat-option>
     </mat-autocomplete>
 </mat-form-field>

@@ -148,6 +148,10 @@
                 Confirmação de E-mail é obrigatória
               </mat-error>
               <mat-error
+                *ngIf="cadastroForm.get('confirmarSenha')?.errors?.['equalTo']">
+                Emails não coincidem
+              </mat-error>
+              <mat-error
                 *ngIf="cadastroForm.get('confirmarEmail')?.errors?.['email']">
                 E-mail inválido
               </mat-error>
@@ -164,6 +168,10 @@
               <mat-error
                 *ngIf="cadastroForm.get('confirmarSenha')?.errors?.['required']">
                 Confirmação de Senha é obrigatória
+              </mat-error>
+              <mat-error
+                *ngIf="cadastroForm.get('confirmarSenha')?.errors?.['equalTo']">
+                Senhas não coincidem
               </mat-error>
             </mat-form-field>
           </div>
