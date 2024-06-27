@@ -17,51 +17,28 @@
         <mat-card-content>
           <mat-form-field appearance="outline">
             <mat-label>E-mail</mat-label>
-            <input
-              formControlName="email"
-              matInput
-              type="email"
-              placeholder="Digite seu e-mail" >
-            <mat-error
-              *ngIf="loginForm.get('email')?.errors?.['required']"
-              >Email é obrigatório</mat-error>
-            <mat-error
-              *ngIf="loginForm.get('email')?.errors?.['email']"
-              >Formato inválido</mat-error>
+            <input matInput formControlName="email" type="email" placeholder="Digite seu e-mail">
+            <mat-error *ngIf="loginForm.get('email')?.errors?.['required']">E-mail é obrigatório</mat-error>
+            <mat-error *ngIf="loginForm.get('email')?.errors?.['email']">E-mail inválido</mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Senha</mat-label>
-            <input
-              formControlName="senha"
-              matInput type="password" placeholder="Digite sua senha"
-            >
-            <mat-error
-              *ngIf="loginForm.get('senha')?.errors?.['required']"
-              >Senha é obrigatória
-            </mat-error>
+            <input matInput formControlName="senha" type="password" placeholder="Digite sua senha">
+            <mat-error *ngIf="loginForm.get('senha')?.errors">Senha é obrigatória</mat-error>
           </mat-form-field>
         </mat-card-content>
         <mat-card-actions>
-          <button
-            [disabled]="loginForm.invalid"
-            (click)="login()"
-            mat-flat-button
-            color="primary"
-             >
+          <button [disabled]="loginForm.invalid" mat-flat-button color="primary" (click)="login()">
             ACESSAR MINHA CONTA
           </button>
         </mat-card-actions>
-        <p>
-          Ainda não possui conta?
-          <a>
-            <strong>
-              <u>Clique aqui para se cadastrar!</u>
-            </strong>
-          </a>
+        <p>Ainda não possui conta?
+          <a routerLink="/cadastro"><strong><u>Clique aqui para se cadastrar!</u></strong></a>
         </p>
       </form>
     </div>
   </mat-card>
 </section>
+
 
 

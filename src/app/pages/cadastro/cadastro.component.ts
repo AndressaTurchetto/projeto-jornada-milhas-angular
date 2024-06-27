@@ -4,6 +4,7 @@ import { CadastroService } from 'src/app/core/services/cadastro.service';
 import { FormularioService } from 'src/app/core/services/formulario.service';
 import { PessoaUsuaria } from 'src/app/core/types/types';
 
+
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',

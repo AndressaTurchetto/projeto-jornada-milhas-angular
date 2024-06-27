@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TokenService } from './token.service';
+
 import { BehaviorSubject } from 'rxjs';
 import { PessoaUsuaria } from '../types/types';
 
@@ -41,6 +42,8 @@ export class UserService {
     return this.tokenService.possuiToken();
   }
 }
+
+
 
 function jwt_decode(token: string): PessoaUsuaria {
   throw new Error('Function not implemented.');
