@@ -1,0 +1,21 @@
+<header class="app-header">
+  <mat-toolbar>
+    <a routerLink="/">
+      <h1>Home</h1>
+    </a>
+    <span class="spacer"></span>
+    <div class="links-toolbar">
+      <ng-container *ngIf="user$ | async as pessoaUsuaria; else login">
+        <a routerLink="auth/perfil">
+          <img src="assets/icones/user.png" alt="Ícone da pessoa usuária">
+        </a>
+        <button mat-stroked-button color="primary" (click)="logout()">SAIR</button>
+      </ng-container>
+      <ng-template #login>
+        <button routerLink="auth/cadastro" mat-raised-button color="primary">CADASTRE-SE</button>
+        <button routerLink="auth/login" mat-stroked-button>LOGIN</button>
+      </ng-template>
+    </div>
+  </mat-toolbar>
+</header>
+
