@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,6 +36,9 @@ import { ErrosInterceptor } from './core/erro/erros.interceptor';
       provide: HTTP_INTERCEPTORS,
       useClass: AutenticacaoInterceptor,
       multi: true
+    },
+    {
+      provide: LOCALE_ID, useValue: 'pt-BR'
     },
     {
       provide: HTTP_INTERCEPTORS,
